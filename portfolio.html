@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Daniyal Bhatti Portfolio</title>
+        <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    
+        <script type="importmap">
+          {
+            "imports": {
+              "three": "https://unpkg.com/three@v0.163.0/build/three.module.js",
+              "three/addons/": "https://unpkg.com/three@v0.163.0/examples/jsm/"
+            }
+          }
+        </script>
+		<link rel="stylesheet" href="styles2.css">
+
+	</head>
+	<body>
+
+        <div class="handimage">
+            
+            <img src="/Models/hand.png" alt="Model Image" class="hand-image">
+        </div>
+
+
+        <div class="kidimage">
+            
+          <img src="/Models/kid.png" alt="Model Image" class="kid-image">
+      </div>
+
+      <div class="witchimage">
+            
+        <img src="/Models/witch.jpg" alt="Model Image" class="witch-image">
+    </div>
+        <div class="video-thumbnail">
+           
+            <video class="video" muted loop preload="metadata">
+                <source src="/Models/FInalAnim.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+       
+        <div class="thumbnailborder">
+           <h2>Portfolio</h2>
+        </div>
+
+       
+        <div class="startbar">
+           <h2></h2>
+        </div>
+
+        <button id="closeportfolio">X</button>
+        <script type="module" src="./script2.js"></script>
+	</body>
+</html>

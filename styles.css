@@ -1,0 +1,252 @@
+@font-face {
+    font-family: 'SF Distant Galaxy';
+    src: local('SF Distant Galaxy'), url(fonts/SF\ Distant\ Galaxy.ttf), format('ttf');
+  }
+  
+ 
+  
+  html, body {
+    background-color:#F5F5DC; /* Light Gray */
+    color: #333333; /* Charcoal Gray */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+#model {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.8s ease; /* Smooth movement */
+}
+
+#model.move-right {
+  transform: translate(-30%, -50%); /* Move model to the right side */
+}
+  #heading {
+    position: fixed;
+    width: 100%;
+    padding: 32px;
+    box-sizing: border-box; /* Ensure padding doesn't increase width */
+}
+  .border {
+    background: linear-gradient(90deg, gray, 90%, black);
+    height: 2px;
+    width: 80vw;
+    margin-top: 4px;
+  }
+  
+  #about-window {
+   
+    font-family: Arial, sans-serif; /* Font family */
+    color:#333333; /* Text color */
+    position: fixed;
+    top: 60%; /* Adjust as necessary */
+    left: -100%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    border-radius: 15px;
+    height: 50%;
+    background-color: rgba(121, 120, 85, 0.603);
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.6s ease, left 0.6s ease;
+    z-index: 10; /* Make sure it's above other content */
+}
+.about-paragraph{
+  
+  font-size: 1.6vw;
+}
+
+
+.resume{
+  font-weight: bold;
+  top: 67%;
+  left: 2%;
+  position: absolute;
+  display: inline;
+  font-size: 1.2vw;
+}
+.linkedin{
+  font-weight: bold;
+  top: 76%;
+  left: 2%;
+  position: absolute;
+  display: inline;
+  font-size: 1.2vw;
+}
+
+.linkedin:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.artstation{
+  font-weight: bold;
+  top: 85%;
+  left: 2%;
+  position: absolute;
+  display: inline;
+  font-size: 1.1vw;
+}
+
+.artstation:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.resume:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#about-window.show {
+  left: 30%; /* Final position */
+  transform: translate(-50%, -50%); /* Center horizontally */
+}
+
+#about-window.hide {
+  left: 30%; /* Final position */
+  transform: translate(-50%, -50%); /* Center horizontally */
+}
+  h1 {
+    white-space: nowrap;
+    position: absolute;
+    top: -5%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset to truly center */
+    font-size: calc(10vw + 6vh);
+    color:#333333; /* Text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add shadow for depth */
+    z-index: 0; /* Ensure it stays behind the 3D model */
+    font-family: Arial, sans-serif; /* Font family */
+    pointer-events: none; /* Ensure the text doesn’t block mouse events */
+    
+  }
+
+  
+  .name,
+button {
+  transform: translateY(-2);
+  opacity: 1;
+  transition: transform 0.5s, opacity 0.5s; /* Smooth transition when applied */
+}
+  #overlay {
+    position: fixed; /* Fixed positioning to stay in view */
+    top: 0; /* Start at the top of the viewport */
+    left: 0; /* Align with the left edge */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(145, 35, 35, 0.8); /* White with some transparency */
+    z-index: 2; /* Higher than the canvas */
+    pointer-events: none; /* Allow interactions with the canvas behind it */
+}
+
+.subtext:hover {
+  text-decoration: underline;
+  cursor: pointer; /* Optional: changes cursor to pointer */
+}
+
+#about{
+  top: 25%;
+  position: absolute;
+  left: 30%;
+  transform: translateX(-50%);
+  font-size: 3vw;
+  color: #333333;
+  font-family: Arial, sans-serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  
+}
+#projects{
+  top: 25%;
+  position: absolute;
+  left: 70%;
+  transform: translateX(-50%);
+  font-size: 3vw;
+  color: #333333;
+  font-family: Arial, sans-serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+ 
+}
+
+
+/* Positioning for "About" */
+
+
+/* Positioning for "Projects" */
+#close-about {
+ 
+  background-color: #333333; /* Red background */
+  color: white; /* White text */
+  border: none; /* Remove default border */
+  padding: 10px 20px; /* Add padding */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1em; /* Font size */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+  position: fixed; /* Fixes the button to the viewport */
+  bottom: 20px; /* Distance from the bottom */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for the width of the button */
+  z-index: 3; /* Ensure it appears above other elements */
+}
+
+#portfolio-window {
+  font-family: Arial, sans-serif; /* Font family */
+  color:#333333; /* Text color */
+  position: fixed;
+  top: 50%; /* Adjust as necessary */
+  left: -100%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  border-radius: 15px;
+  height: 100%;
+  background-color: rgba(121, 120, 85, 0);
+  padding: 20px;
+  
+  transition: transform 4s ease, left 4s ease;
+  z-index: 10; /* Make sure it's above other content */
+}
+
+#portfolio-window.show {
+  left: 50%; /* Final position */
+  transform: translate(-50%, -52%); /* Center horizontally */
+}
+#close-portfolio {
+ 
+  background-color: #333333; /* Red background */
+  color: white; /* White text */
+  border: none; /* Remove default border */
+  padding: 10px 20px; /* Add padding */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1em; /* Font size */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+  position: fixed; /* Fixes the button to the viewport */
+  bottom: 0px; /* Distance from the bottom */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for the width of the button */
+  z-index: 3; /* Ensure it appears above other elements */
+}
+#close-portfolio:hover {
+  background-color: #ff1a1a; /* Darker red on hover */
+}
+#close-about:hover {
+  background-color: #ff1a1a; /* Darker red on hover */
+}
+  #progress-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #progress {
+    font-size: 3em;
+    color: white;
+  }

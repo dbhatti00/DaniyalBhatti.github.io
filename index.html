@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Daniyal Bhatti</title>
+
+		<link rel="stylesheet" href="styles.css">
+
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@v0.163.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@v0.163.0/examples/jsm/"
+        }
+      }
+    </script>
+	</head>
+	<body>
+    <div id="model">
+      <!-- The Three.js canvas will go inside this div -->
+  </div>
+      
+    <div class="name moving-text"><h1>Daniyal Bhatti</h1></div>
+ 
+   
+    <div id="about" class="subtext">About</div>
+    <div id="projects" class="subtext">Portfolio</div>
+
+
+    <div id="portfolio-window">
+     
+      <button id="close-portfolio">Close</button>
+  </div>
+    
+    <div id="about-window">
+      <h2>About Me:</h2>
+      <p class="about-paragraph">I'm Daniyal Bhatti, a 3D artist and animator with a 
+        diploma in Digital Media and IT from the Northern Alberta Institute of Technology. 
+        I’m experienced in ZBrush, Maya, Substance Painter, Unreal Engine, Unity, and Blender.
+         My work spans both stylized and realistic projects, and I love pushing the boundaries of digital art. Click on the Portfolio button to see more.
+
+      </p>
+      <button id="close-about">Close</button>
+
+      <div id="resumedownload"h2 class="resume">My Resume</h2></div>
+      <div id="linkedin" h2 class="linkedin">Linkedin</h2></div>
+      <div id="artstation" h2 class="artstation">ArtStation</h2></div>
+  </div>
+
+		<script type="module" src="./script.js"></script>
+    
+	</body>
+</html>
