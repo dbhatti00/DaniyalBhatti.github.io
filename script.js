@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
- import { DRACOLoader } from 'https://cdn.jsdelivr.net/npm/three@0.163.0/examples/jsm/loaders/DRACOLoader.js';
+import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.outputColorSpace = THREE.SRGBColorSpace;
@@ -115,7 +115,7 @@ loader.load('Me10.glb', (glb) => {
     tabletModel = glb.scene.getObjectByName("tablet");
     
     scene.add(mesh);
-headbone.rotation.x = Math.PI / 2;
+
 const animations = glb.animations;
 const armAnimationName = 'metarigAction'; // Replace this with the name you think is correct
 
@@ -141,7 +141,7 @@ console.log(animations); // Check what animations are available
     
     headBone = mesh.getObjectByName('head');
     // Find the head bone (assuming the head is rigged)
-   
+   headBone.rotation.x = Math.PI / 2;
         
             
        
