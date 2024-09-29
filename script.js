@@ -40,8 +40,7 @@ const buttons = document.querySelectorAll('.buttons button'); // Select all butt
 const aboutButton = document.getElementById('about');
 const portfolioButton = document.getElementById('projects');
 const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-directionalLight.position.set(5, 5, 5).normalize();
-scene.add(directionalLight);
+
 const intersectionPoint = new THREE.Vector3();
 const target = new THREE.Object3D();
 const planeNormal = new THREE.Vector3();
@@ -56,7 +55,7 @@ let armAnimationClip;
 let headBone;  // Variable to store the head bone
 let targetHeadRotation = new THREE.Vector3(Math.PI / 4, 0, 0);
 let followMouse = true; // Flag to control head movement
-scene.background = new THREE.Color(0xf5f5dc); // Light Gray
+
 let tabletModel;
 const newRotationX = THREE.MathUtils.degToRad(90); 
 const newRotationY = THREE.MathUtils.degToRad(0);  
