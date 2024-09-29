@@ -29,8 +29,7 @@ document.body.appendChild(renderer.domElement);
 scene.background = new THREE.Color(0xf0f0f0, 1);
 
 // Add ambient light
-const ambientLight = new THREE.AmbientLight(0xffffff, 1); // Soft white light
-scene.add(ambientLight);
+
 
 const closeportButton = document.getElementById('close-portfolio');
 const pdfdownload = document.getElementById('resumedownload');
