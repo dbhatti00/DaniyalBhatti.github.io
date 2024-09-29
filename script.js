@@ -1,13 +1,14 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
+ import { DRACOLoader } from 'https://cdn.jsdelivr.net/npm/three@0.163.0/examples/jsm/loaders/DRACOLoader.js';
 const draco = new DRACOLoader();
 const dracoLoader = new DRACOLoader();
 dracoLoader.setDecoderPath( '/examples/jsm/libs/draco/' );
 loader.setDRACOLoader( dracoLoader );
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.outputColorSpace = THREE.SRGBColorSpace;
+ dracoLoader.setDecoderPath('https://cdn.jsdelivr.net/npm/three@0.163.0/examples/js/libs/draco/');
 
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setClearColor(0x000000);
