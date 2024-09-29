@@ -70,7 +70,7 @@ const newRotationZ = THREE.MathUtils.degToRad(180);
 
 const overlay = document.getElementById('overlay');
 const loader = new GLTFLoader().setPath('/Models/');
-loader.setDRACOLoader(dracoLoader);
+
 window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
     
