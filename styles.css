@@ -40,7 +40,7 @@
   
   #about-window {
    
-    font-family: Arial, sans-serif; /* Font family */
+     font-family: 'Poppins', sans-serif;
     color:#333333; /* Text color */
     position: fixed;
     top: 60%; /* Adjust as necessary */
@@ -56,8 +56,11 @@
     z-index: 10; /* Make sure it's above other content */
 }
 .about-paragraph{
-  
-  font-size: 1.6vw;
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  font-size:1.3vw;
+  overflow-wrap: break-word;
 }
 
 
@@ -114,14 +117,14 @@
   h1 {
     white-space: nowrap;
     position: absolute;
-    top: -5%; /* Center vertically */
+    top: -3%; /* Center vertically */
     left: 50%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Offset to truly center */
-    font-size: calc(10vw + 6vh);
+    font-size: calc(9vw + 5vh);
     color:#333333; /* Text color */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add shadow for depth */
     z-index: 0; /* Ensure it stays behind the 3D model */
-    font-family: Arial, sans-serif; /* Font family */
+    font-family: 'Poppins', sans-serif;
     pointer-events: none; /* Ensure the text doesn’t block mouse events */
     
   }
@@ -156,7 +159,7 @@ button {
   transform: translateX(-50%);
   font-size: 3vw;
   color: #333333;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   
 }
@@ -167,7 +170,7 @@ button {
   transform: translateX(-50%);
   font-size: 3vw;
   color: #333333;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
  
 }
@@ -195,7 +198,7 @@ button {
 }
 
 #portfolio-window {
-  font-family: Arial, sans-serif; /* Font family */
+  font-family: 'Poppins', sans-serif;
   color:#333333; /* Text color */
   position: fixed;
   top: 50%; /* Adjust as necessary */
