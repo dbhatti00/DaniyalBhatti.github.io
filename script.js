@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
 
 
 const renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -9,7 +9,7 @@ const renderer = new THREE.WebGLRenderer({ antialias: true });
 
 
 
-document.body.appendChild(renderer.domElement);
+
 
 const scene = new THREE.Scene();
 // Set up a camera
@@ -19,12 +19,6 @@ camera.position.y = .5;
 
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
-
-// Set a white background
-
-
-// Add ambient light
-
 
 const closeportButton = document.getElementById('close-portfolio');
 const pdfdownload = document.getElementById('resumedownload');
@@ -36,7 +30,6 @@ const model = document.getElementById('model');
 const aboutWindow = document.getElementById('about-window');
 const portfolioWindow = document.getElementById('portfolio-window');
 const name = document.querySelector('.name'); // Select your name element
-const buttons = document.querySelectorAll('.buttons button'); // Select all buttons in the buttons div
 const aboutButton = document.getElementById('about');
 const portfolioButton = document.getElementById('projects');
 
@@ -47,13 +40,10 @@ const planeNormal = new THREE.Vector3();
 const plane = new THREE.Plane();
 const raycaster = new THREE.Raycaster();
 const mousePosition = new THREE.Vector2();
-const xOffset = 0.1;  // Adjust this value to correct the vertical alignment
-const yOffset = 0.1;
 let mixer;
 let armAnimationClip;
 // Load your 3D model
 let headBone;  // Variable to store the head bone
-let targetHeadRotation = new THREE.Vector3(Math.PI / 4, 0, 0);
 let followMouse = true; // Flag to control head movement
 
 let tabletModel;
@@ -63,17 +53,6 @@ const newRotationZ = THREE.MathUtils.degToRad(180);
 
 const overlay = document.getElementById('overlay');
 const loader = new GLTFLoader().setPath('/Models/');
-
-window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    
-    // Adjust this threshold as needed
-    if (scrollY > 100) { // When scrolled more than 100 pixels
-        overlay.style.display = 'block'; // Show the overlay
-    } else {
-        overlay.style.display = 'none'; // Hide the overlay
-    }
-});
 
 
 
@@ -92,7 +71,7 @@ window.addEventListener('mousemove', function(e) {
 
 
 loader.load('Me10.glb', (glb) => {
-  console.log('loading model');
+
   const mesh = glb.scene;
     
     // Center the model
@@ -126,7 +105,7 @@ if (animations && animations.length) {
     }
 }
 
-console.log(animations); // Check what animations are available
+
 
 
     
@@ -137,7 +116,7 @@ console.log(animations); // Check what animations are available
             
        
 
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    
     
     
     
@@ -153,9 +132,7 @@ console.log(animations); // Check what animations are available
 // Mouse movement listener
 
 
-function playArmAnimation() {
-    
-}
+
 // Animate the head to follow the mouse
 function animate() {
     requestAnimationFrame(animate);
@@ -179,14 +156,11 @@ animate();
       // Get the elements for the model and about window
     
 
-      console.log('Model:', model);
-    console.log('About Button:', aboutButton);
-    console.log('About Button:', portfolioButton);
-    console.log('About Window:', aboutWindow);
+    
           // Move the model to the right
-          let rotationSpeed = 0.1; // Change this value to adjust the speed
+       
           aboutButton.addEventListener('click', function() {
-            console.log('About button clicked!'); // Debugging
+           
             
             followMouse = false; // Disable mouse following
             const targetHeadRotation = new THREE.Vector3(Math.PI / 1.65, 0, 0);
@@ -233,7 +207,7 @@ animate();
         
 
 portfolioButton.addEventListener('click',function(){
-    console.log('Portfolio button clicked!'); // Debugging
+   
     aboutWindow.classList.remove('show');
     model.classList.remove('move-right');
     name.style.transform = 'translateY(-100)'; // Move the name up
