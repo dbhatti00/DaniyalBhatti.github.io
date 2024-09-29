@@ -40,6 +40,8 @@ const buttons = document.querySelectorAll('.buttons button'); // Select all butt
 const aboutButton = document.getElementById('about');
 const portfolioButton = document.getElementById('projects');
 const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+directionalLight.position.set(5, 5, 5).normalize();
+scene.add(directionalLight);
 
 const intersectionPoint = new THREE.Vector3();
 const target = new THREE.Object3D();
