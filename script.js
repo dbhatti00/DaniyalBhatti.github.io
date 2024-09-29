@@ -112,7 +112,7 @@ loader.load('Me10.glb', (glb) => {
     tabletModel = glb.scene.getObjectByName("tablet");
     
     scene.add(mesh);
-model.rotation.x = Math.PI / 2;
+headbone.rotation.x = Math.PI / 2;
 const animations = glb.animations;
 const armAnimationName = 'metarigAction'; // Replace this with the name you think is correct
 
