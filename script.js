@@ -26,7 +26,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
 // Set a white background
-scene.background = new THREE.Color(0xf0f0f0, 1);
+
 
 // Add ambient light
 
