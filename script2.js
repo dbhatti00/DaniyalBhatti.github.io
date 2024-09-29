@@ -1,9 +1,6 @@
-import * as THREE from 'three';
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
 
 const closeportfolio = document.getElementById('closeportfolio');
-
 const videoThumbnail = document.querySelector('.video-thumbnail');
 const video = videoThumbnail.querySelector('.video');
 
@@ -15,7 +12,7 @@ document.querySelectorAll('.hand-image').forEach((img) => {
     });
 });
 closeportfolio.addEventListener('click',function(){
-      window.location.href = 'index.html';
+    window.location.href = 'index.html';
 })
 
 videoThumbnail.addEventListener('mouseenter', () => {
