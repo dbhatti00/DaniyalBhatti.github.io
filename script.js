@@ -39,9 +39,7 @@ const name = document.querySelector('.name'); // Select your name element
 const buttons = document.querySelectorAll('.buttons button'); // Select all buttons in the buttons div
 const aboutButton = document.getElementById('about');
 const portfolioButton = document.getElementById('projects');
-const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-directionalLight.position.set(5, 5, 5).normalize();
-scene.add(directionalLight);
+
 scene.background = new THREE.Color(0xf5f5dc); // Light Gray
 const intersectionPoint = new THREE.Vector3();
 const target = new THREE.Object3D();
