@@ -8,8 +8,7 @@ renderer.outputColorSpace = THREE.SRGBColorSpace;
 
 
 renderer.setSize(window.innerWidth, window.innerHeight);
-renderer.setClearColor(0x000000);
-renderer.setPixelRatio(window.devicePixelRatio);
+
 
 
 
