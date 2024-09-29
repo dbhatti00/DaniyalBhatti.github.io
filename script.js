@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
+
 
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.outputColorSpace = THREE.SRGBColorSpace;
@@ -32,8 +32,6 @@ scene.background = new THREE.Color(0xf0f0f0, 1);
 const ambientLight = new THREE.AmbientLight(0xffffff, 1); // Soft white light
 scene.add(ambientLight);
 
-const dracoLoader = new DRACOLoader();
- dracoLoader.setDecoderPath('https://cdn.jsdelivr.net/npm/three@0.163.0/examples/js/libs/draco/');
 const closeportButton = document.getElementById('close-portfolio');
 const pdfdownload = document.getElementById('resumedownload');
 const linkedinbutton = document.getElementById('linkedin');
