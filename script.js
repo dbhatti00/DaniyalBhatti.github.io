@@ -71,7 +71,7 @@ const newRotationY = THREE.MathUtils.degToRad(0);
 const newRotationZ = THREE.MathUtils.degToRad(180); 
 
 const overlay = document.getElementById('overlay');
-const loader = new GLTFLoader();
+const loader = new GLTFLoader().setPath('/Models/');
 loader.setDRACOLoader(dracoLoader);
 window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
@@ -99,7 +99,7 @@ window.addEventListener('mousemove', function(e) {
 
 
 
-const loader = new GLTFLoader().setPath('/Models/');
+
 loader.load('Me10.glb', (glb) => {
   console.log('loading model');
   const mesh = glb.scene;
