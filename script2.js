@@ -15,7 +15,7 @@ document.querySelectorAll('.hand-image').forEach((img) => {
     });
 });
 closeportfolio.addEventListener('click',function(){
-    window.location.href = 'index.html';
+     window.location.href = "https://daniyalbhatti.ca";
 })
 
 videoThumbnail.addEventListener('mouseenter', () => {
