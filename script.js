@@ -22,6 +22,7 @@ document.body.appendChild(renderer.domElement);
 
 const closeportButton = document.getElementById('close-portfolio');
 const pdfdownload = document.getElementById('resumedownload');
+const emailcopy = document.getElementById('Email');
 const linkedinbutton = document.getElementById('linkedin');
 const closeButton = document.getElementById('close-about');
 const modelDiv = document.getElementById('model');
@@ -304,4 +305,26 @@ linkedinbutton.addEventListener('click', function() {
 
 pdfdownload.addEventListener('click', function() {
     window.open('/Models/Daniyal_Bhatti_Resume.pdf', '_blank');
+})
+
+emailcopy.addEventListener('click', function() {
+    const customText = "danibatty00@gmail.com";
+
+      // Create a temporary input element
+      const tempInput = document.createElement('input');
+      tempInput.value = customText;
+      
+      // Add the input to the body and select its content
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      tempInput.setSelectionRange(0, 99999);  // For mobile devices
+
+      // Copy the selected text
+      document.execCommand('copy');
+
+      // Remove the temporary input element
+      document.body.removeChild(tempInput);
+
+      // Optional: Give feedback
+      alert('Custom text copied to clipboard: ' + customText);
 })
