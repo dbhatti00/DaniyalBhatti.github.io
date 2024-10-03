@@ -88,18 +88,31 @@
 
 .artstation{
   font-weight: bold;
-  top: 85%;
+  top: 84%;
   left: 2%;
   position: absolute;
   display: inline;
   font-size: 1.1vw;
 }
 
+.email{
+  font-weight: bold;
+  top: 84%;
+  left: 55%;
+  position: absolute;
+  display: inline;
+  font-size: 1.1vw;
+}
+
+
 .artstation:hover{
   cursor: pointer;
   text-decoration: underline;
 }
-
+.email:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
 .resume:hover{
   cursor: pointer;
   text-decoration: underline;
