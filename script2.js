@@ -1,8 +1,6 @@
 
 
 const closeportfolio = document.getElementById('closeportfolio');
-const videoThumbnail = document.querySelector('.video-thumbnail');
-const video = videoThumbnail.querySelector('.video');
 
 
 
@@ -15,13 +13,5 @@ closeportfolio.addEventListener('click',function(){
     window.location.href = 'index.html';
 })
 
-videoThumbnail.addEventListener('mouseenter', () => {
-    video.play(); // Play video on mouse enter
-});
-
-videoThumbnail.addEventListener('mouseleave', () => {
-    video.pause(); // Pause video on mouse leave
-    video.currentTime = 0; // Reset video to the beginning
-});
 
 
