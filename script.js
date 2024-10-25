@@ -71,7 +71,7 @@ window.addEventListener('mousemove', function(e) {
 
 
 
-loader.load('Me10.glb', (glb) => {
+loader.load('Me11.glb', (glb) => {
 
   const mesh = glb.scene;
     
