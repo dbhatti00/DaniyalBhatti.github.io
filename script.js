@@ -99,7 +99,7 @@ if (!armAnimationClip) {
 if (animations && animations.length) {
     mixer = new THREE.AnimationMixer(mesh); // Create the mixer
     
-    const blinkAction = mixer.clipAction(animations.find(clip => clip.name === 'KeyAction')); // Change this line
+    const blinkAction = mixer.clipAction(animations.find(clip => clip.name === 'Key.003Action')); // Change this line
    
     if (blinkAction) {
         blinkAction.play(); // Play the blink animation
