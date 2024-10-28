@@ -122,24 +122,47 @@ if (animations && animations.length) {
 
 
 
+function onWindowResize() {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+}
 
+window.addEventListener('resize', debounce(onWindowResize, 200));
+
+function debounce(func, wait) {
+    let timeout;
+    return function(...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), wait);
+    };
+}
 
 // Animate the head to follow the mouse
+let isAnimating = true; // Default is true if there's an initial animation
 function animate() {
-    requestAnimationFrame(animate);
-    if (mixer && armAnimationClip) {
-        mixer.update(0.01); // Adjust the time delta as needed
+    if (isAnimating) {
+        requestAnimationFrame(animate);
+        if (mixer) mixer.update(0.01);
+        if (followMouse && headBone) headBone.lookAt(target.position);
+        renderer.render(scene, camera);
     }
-    if (followMouse && headBone) {
-        headBone.lookAt(target.position);
-    }
-    renderer.render(scene, camera);
 }
 
 
 
 
-animate();
+function startAnimation() {
+    isAnimating = true;
+    animate();
+}
+
+function stopAnimation() {
+    isAnimating = false;
+}
+
+// Start and stop as needed
+startAnimation();
 
      
        
