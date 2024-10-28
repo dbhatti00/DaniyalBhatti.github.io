@@ -30,11 +30,11 @@ modelDiv.appendChild(renderer.domElement);
 const model = document.getElementById('model');
 const aboutWindow = document.getElementById('about-window');
 const portfolioWindow = document.getElementById('portfolio-window');
-const name = document.querySelector('.name'); // Select your name element
+const name = document.querySelector('.name'); 
 const aboutButton = document.getElementById('about');
 const portfolioButton = document.getElementById('projects');
 
-scene.background = new THREE.Color(0xf5f5dc); // Light Gray
+scene.background = new THREE.Color(0xf5f5dc);
 const intersectionPoint = new THREE.Vector3();
 const target = new THREE.Object3D();
 const planeNormal = new THREE.Vector3();
@@ -43,9 +43,9 @@ const raycaster = new THREE.Raycaster();
 const mousePosition = new THREE.Vector2();
 let mixer;
 let armAnimationClip;
-// Load your 3D model
-let headBone;  // Variable to store the head bone
-let followMouse = true; // Flag to control head movement
+
+let headBone;  
+let followMouse = true; 
 
 let tabletModel;
 const newRotationX = THREE.MathUtils.degToRad(90); 
@@ -56,16 +56,23 @@ const newRotationZ = THREE.MathUtils.degToRad(180);
 const loader = new GLTFLoader().setPath('/Models/');
 
 
+let lastUpdateTime = 0;
 
 window.addEventListener('mousemove', function(e) {
-    mousePosition.x = (e.clientX / this.window.innerWidth) * 2 - 1;
-    mousePosition.y = -(e.clientY / this.window.innerHeight) * 2.5 + 1;
+    const now = Date.now();
+    if (now - lastUpdateTime < 16) return; // Update every ~16ms (60fps)
+    lastUpdateTime = now;
+
+    mousePosition.x = (e.clientX / window.innerWidth) * 2 - 1;
+    mousePosition.y = -(e.clientY / window.innerHeight) * 2.5 + 1;
     planeNormal.copy(camera.position).normalize();
     plane.setFromNormalAndCoplanarPoint(planeNormal, scene.position);
     raycaster.setFromCamera(mousePosition, camera);
     raycaster.ray.intersectPlane(plane, intersectionPoint);
     target.position.set(intersectionPoint.x, intersectionPoint.y, 2);
+   
 });
+
 
 
 
@@ -88,16 +95,16 @@ loader.load('Me11.glb', (glb) => {
     scene.add(mesh);
 
 const animations = glb.animations;
-const armAnimationName = 'metarigAction'; // Replace this with the name you think is correct
+const armAnimationName = 'metarigAction';
 
 armAnimationClip = animations.find(animation => animation.name === armAnimationName);
 
 if (!armAnimationClip) {
     console.error(`Arm animation clip not found for: "${armAnimationName}". Please double-check the animation name.`);
-    return; // Exit if the animation clip is not found
+    return; 
 }
 if (animations && animations.length) {
-    mixer = new THREE.AnimationMixer(mesh); // Create the mixer
+    mixer = new THREE.AnimationMixer(mesh); 
     
     const blinkAction = mixer.clipAction(animations.find(clip => clip.name === 'Key.003Action')); // Change this line
    
@@ -106,31 +113,14 @@ if (animations && animations.length) {
     }
 }
 
-
-
-
-    
     headBone = mesh.getObjectByName('head');
-    // Find the head bone (assuming the head is rigged)
    headBone.rotation.x = Math.PI / 2;
         
-            
-       
-
-    
-    
-    
-    
-
-    
-    
-
 }, undefined, (error) => {
     console.error('Model loading error:', error);
 });
 
 
-// Mouse movement listener
 
 
 
@@ -147,29 +137,11 @@ function animate() {
 }
 
 
-function onWindowResize() {
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-}
 
-window.addEventListener('resize', debounce(onWindowResize, 200));
-
-function debounce(func, wait) {
-    let timeout;
-    return function(...args) {
-        clearTimeout(timeout);
-        timeout = setTimeout(() => func.apply(this, args), wait);
-    };
-}
 
 animate();
 
-      // Get the elements for the model and about window
-    
-
-    
-          // Move the model to the right
+     
        
           aboutButton.addEventListener('click', function() {
            
@@ -194,7 +166,7 @@ animate();
                     requestAnimationFrame(animateHeadRotation); // Keep animating until close enough
                 }
                 else {
-                    // Play the arm animation here if it's defined
+                   
                     if (armAnimationClip) {
                         const action = mixer.clipAction(armAnimationClip);
                         action.play(); // Play the arm animation
@@ -213,7 +185,7 @@ animate();
             }
             followMouse = true;
             model.classList.remove('move-right');
-            aboutWindow.classList.remove('show'); // Remove the "show" class to hide it
+            aboutWindow.classList.remove('show'); 
         });
 
         
@@ -235,7 +207,7 @@ gsap.to(tabletModel.rotation, {
     x: newRotationX,
     y: newRotationY,
     z: newRotationZ,
-    duration: 1.5,  // Animation lasts for 2 seconds
+    duration: 1.5,  
     ease: "power1.inOut"
 });
 gsap.to(camera.position, {
@@ -244,22 +216,22 @@ gsap.to(camera.position, {
     z: 0.1,
     x: -0.08,
     y: 0.08,
-    duration: 2, // Duration of animation in seconds
-    ease: "power1.inOut", // Easing function for smoothness
+    duration: 2, 
+    ease: "power1.inOut",
     
 });
 gsap.to(camera.rotation, {
     
     
     x:-.5,
-    duration: 2, // Duration of animation in seconds
-    ease: "power1.inOut", // Easing function for smoothness
+    duration: 2, 
+    ease: "power1.inOut", 
     
 });
 
 setTimeout(function() {
-    window.location.href = 'portfolio.html'; // Change to your target page
-  }, 1800); // Match this time with the transition duration in CSS
+    window.location.href = 'portfolio.html'; 
+  }, 1800); 
 
 
 
@@ -275,7 +247,7 @@ closeportButton.addEventListener('click', function() {
   
 
 
-// Animate the rotation using GSAP
+
 gsap.to(tabletModel.rotation, {
     x: 0,
     y:0,
@@ -289,16 +261,16 @@ gsap.to(camera.position, {
     z: 1,
     x: 0,
     y: .5,
-    duration: 2, // Duration of animation in seconds
-    ease: "power1.inOut", // Easing function for smoothness
+    duration: 2, 
+    ease: "power1.inOut", 
     
 });
 gsap.to(camera.rotation, {
     
     
     x:0,
-    duration: 2, // Duration of animation in seconds
-    ease: "power1.inOut", // Easing function for smoothness
+    duration: 2, 
+    ease: "power1.inOut",
     
 });
 portfolioWindow.classList.remove('show');
@@ -321,21 +293,21 @@ pdfdownload.addEventListener('click', function() {
 emailcopy.addEventListener('click', function() {
     const customText = "danibatty00@gmail.com";
 
-      // Create a temporary input element
+      
       const tempInput = document.createElement('input');
       tempInput.value = customText;
       
-      // Add the input to the body and select its content
+   
       document.body.appendChild(tempInput);
       tempInput.select();
-      tempInput.setSelectionRange(0, 99999);  // For mobile devices
+      tempInput.setSelectionRange(0, 99999);  
 
-      // Copy the selected text
+      
       document.execCommand('copy');
 
-      // Remove the temporary input element
+    
       document.body.removeChild(tempInput);
 
-      // Optional: Give feedback
+    
       alert('Custom text copied to clipboard: ' + customText);
 })
