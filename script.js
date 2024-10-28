@@ -52,7 +52,7 @@ const newRotationX = THREE.MathUtils.degToRad(90);
 const newRotationY = THREE.MathUtils.degToRad(0);  
 const newRotationZ = THREE.MathUtils.degToRad(180); 
 
-const overlay = document.getElementById('overlay');
+
 const loader = new GLTFLoader().setPath('/Models/');
 
 
@@ -137,21 +137,32 @@ if (animations && animations.length) {
 // Animate the head to follow the mouse
 function animate() {
     requestAnimationFrame(animate);
-    if (mixer) {
+    if (mixer && armAnimationClip) {
         mixer.update(0.01); // Adjust the time delta as needed
     }
-
-    
-    // Rotate head based on mouse movement
-    if (followMouse) {
-    if (headBone) {
-        
-       headBone.lookAt(target.position);
+    if (followMouse && headBone) {
+        headBone.lookAt(target.position);
     }
-    }
-    
     renderer.render(scene, camera);
 }
+
+
+function onWindowResize() {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+}
+
+window.addEventListener('resize', debounce(onWindowResize, 200));
+
+function debounce(func, wait) {
+    let timeout;
+    return function(...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), wait);
+    };
+}
+
 animate();
 
       // Get the elements for the model and about window
