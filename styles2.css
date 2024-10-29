@@ -29,7 +29,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
-    max-width: 1600px;
+    max-width: 85%;
     width: 90%;
     margin: 20px auto;
     padding-top: 10px; /* Adds space between banner and grid */
