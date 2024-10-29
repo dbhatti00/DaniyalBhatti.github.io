@@ -1,30 +1,102 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="styles2.css">
-</head>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    text-align: center; /* Center text-align for children elements */
+}
 
-<body>
-    <header class="banner">
-        <h1>Portfolio</h1>
-        <a href="index.html" class="button">X</a>
-    </header>
+.banner {
+    position: relative; /* Enables absolute positioning within this container */
+    width: 100%;
+    background-color: #000084; /* Blue color for the banner */
+    color: white;
+    text-align: left;
+    padding: 10px 0;
+    font-size: 1em;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
 
-    <div class="image-grid">
-        
-        <div class="image-item1"><img src="/Models/kid.png" alt="Image 1"></div>
-  
-        <div class="image-item2"><img src="/Models/HORSE.png" alt="Image 2"></div>
-        <div id = "hand">   
-        <div class="image-item3"><img src="/Models/hand.png" alt="Image 3"></div>
-    </div>
-        <div class="image-item4"><img src="/Models/witch.jpg" alt="Image 4"></div>
-    </div>
+.image-grid {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 85%;
+    width: 90%;
+    margin: 20px auto;
+    padding-top: 10px; /* Adds space between banner and grid */
+}
 
-    <script type="module" src="script2.js" defer></script>
-</body>
-</html>
+.image-grid.show {
+    
+    opacity: 1;
+    transform: scale(1);
+}
+.image-item1 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.image-item2 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.image-item3 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.image-item4 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+    right: 20px; /* Adjust the distance from the right edge */
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: #858585; /* button color */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    line-height: 40px; /* centers text vertically */
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #b31b00; /* button color on hover */
+}
+
+.image-item3:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .image-grid {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+}
