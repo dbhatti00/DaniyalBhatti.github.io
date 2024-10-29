@@ -1,6 +1,9 @@
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
     const images = document.querySelectorAll('.image-grid');
-    
+   
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -12,3 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     images.forEach(image => observer.observe(image));
 });
+
+document.getElementById('hand').addEventListener('click', function() {
+    window.location.href = 'hand.html'; 
+})
