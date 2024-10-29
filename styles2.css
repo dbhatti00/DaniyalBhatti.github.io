@@ -40,7 +40,28 @@ body {
     opacity: 1;
     transform: scale(1);
 }
-.image-item img {
+.image-item1 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.image-item2 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.image-item3 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.image-item4 img {
     width: 100%;
     height: auto;
     display: block;
@@ -67,6 +88,10 @@ body {
 
 .button:hover {
     background-color: #b31b00; /* button color on hover */
+}
+
+.image-item3:hover {
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {
