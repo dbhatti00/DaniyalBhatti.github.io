@@ -28,6 +28,7 @@ body {
     transition: opacity 0.6s ease, transform 0.6s ease;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    
     gap: 15px;
     max-width: 85%;
     width: 90%;
@@ -68,7 +69,20 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
+.image-item5 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.image-item6 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+   
+}
 .button {
     position: absolute;
     top: 50%;
