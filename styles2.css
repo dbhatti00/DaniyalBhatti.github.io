@@ -1,205 +1,77 @@
-html, body {
-     font-family: 'MS Sans Serif', 'Arial', sans-serif; /* Fallbacks for compatibility */
-    background-color:#ffffff; /* Light Gray */
-    color: #333333; /* Charcoal Gray */
+* {
     margin: 0;
     padding: 0;
-    height: 120%;
-    
+    box-sizing: border-box;
 }
 
-
-.thumbnailwindow {
-    font-family: 'MS Sans Serif', 'Arial', sans-serif; /* Fallbacks for compatibility */
-    color:#333333; /* Text color */
-    position: fixed;
-    top: 50%; /* Adjust as necessary */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70%;
-    
-    height: 70%;
-    background-color: #C5C5C5;
-    padding: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.6s ease, left 0.6s ease;
-    z-index: 1; /* Make sure it's above other content */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    text-align: center; /* Center text-align for children elements */
 }
 
-.thumbnailborder{
-    overflow: hidden; /* Prevent content from overflowing */
-    font-family: 'MS Sans Serif', 'Arial', sans-serif; /* Fallbacks for compatibility */
-    color:#FFFFFF; /* Text color */
-    position: fixed;
-    top: 1.5%; /* Adjust as necessary */
-    left: 50%;
-    transform: translate(-50%, -50%);
+.banner {
+    position: relative; /* Enables absolute positioning within this container */
+    width: 100%;
+    background-color: #000084; /* Blue color for the banner */
+    color: white;
+    text-align: left;
+    padding: 10px 0;
+    font-size: 1em;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.image-grid {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 1600px;
+    width: 90%;
+    margin: 20px auto;
+    padding-top: 10px; /* Adds space between banner and grid */
+}
+
+.image-grid.show {
+    
+    opacity: 1;
+    transform: scale(1);
+}
+.image-item img {
     width: 100%;
     height: auto;
-    background-color: rgb(0,0,132);
-    padding: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.6s ease, left 0.6s ease;
-    z-index: 6; /* Make sure it's above other content */
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.thumbnailborder h2 {
-    padding-top: 1%;
-    padding-left: 1%;
-    font-size: 1.5em; /* Adjust the font size */
-    line-height: 0.5; /* Set line height for better spacing */
-    margin: 0; /* Remove default margin */
-}
-
-.handimage{
-   text-align: center;
+.button {
     position: absolute;
-    animation: expandAnimation 1s ease forwards;  /* Custom animation */
-    opacity: 0;
-    top: 76%; /* Adjust as necessary */
-    left: 2%;
-    transform: translate(-50%, -50%);
-    width: 46%;
-    height: auto;
-    transition: transform 0.6s ease, left 0.6s ease;
-    z-index: 4; /* Make sure it's above other content */
-}
-.hand-image {
-    position: relative;
-    padding-left: 1%;
-    width: 97%; /* Make the image take the full width of the container */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 4px; /* Optional: Add rounded corners to the image */
-    margin-top: 0px; /* Space between the title and image */
+    top: 50%;
+    right: 20px; /* Adjust the distance from the right edge */
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: #858585; /* button color */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    line-height: 40px; /* centers text vertically */
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-@keyframes expandAnimation {
-    0% {
-        transform: scale(0);
-        opacity: 0;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
+.button:hover {
+    background-color: #b31b00; /* button color on hover */
+}
+
+@media (max-width: 768px) {
+    .image-grid {
+        grid-template-columns: 1fr;
+        max-width: 100%;
     }
 }
-
-.kidimage{
-    animation: expandAnimation 1s ease forwards;  /* Custom animation */
-    opacity: 0;
-    text-align: center;
-    position: absolute;
-    top: 16%; /* Adjust as necessary */
-    left: 2%;
-    transform: translate(-50%, -50%);
-    width: 46%;
-    height: auto;
-    z-index: 4; /* Make sure it's above other content */
-
-    
-}
-
-.kid-image {
-    position: relative;
-    padding-left: 1%;
-    width: 97%; /* Make the image take the full width of the container */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 4px; /* Optional: Add rounded corners to the image */
-    margin-top: 0px; /* Space between the title and image */
-}
-.kid-image:hover {
-    cursor: pointer;
-}
-
-.witchimage{
-    text-align: center;
-    position: absolute;
-    animation: expandAnimation 1s ease forwards;  /* Custom animation */
-    opacity: 0;
-    top:76%; /* Adjust as necessary */
-    left: 52%;
-    transform: translate(-50%, -50%);
-    width: 43.5%;
-    height: auto;
-    transition: transform 0.6s ease, left 0.6s ease;
-    z-index: 4; /* Make sure it's above other content */
-}
-
-.witch-image {
-    position: relative;
-    padding-left: 1%;
-    width: 97%; /* Make the image take the full width of the container */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 4px; /* Optional: Add rounded corners to the image */
-    margin-top: 0px; /* Space between the title and image */
-}
-.witch-image:hover {
-    cursor: pointer;
-}
-
-.horse-image{
-    animation: expandAnimation 1s ease forwards;  /* Custom animation */
-    opacity: 0;
-    text-align: center;
-    position: absolute;
-    top: 16%; /* Adjust as necessary */
-    left: 52%;
-    transform: translate(-50%, -50%);
-    width: 45%;
-    height: auto;
-    z-index: 4; /* Make sure it's above other content */
-    
-}
-
-
-.horse-image:hover{
-    cursor: pointer;
-   
-}
-
-
-.hand-image:hover {
-    cursor: pointer;
-}
-
-.startbar {
-    font-family: 'MS Sans Serif', 'Arial', sans-serif; /* Fallbacks for compatibility */
-    color:#333333; /* Text color */
-    position: fixed;
-    top: 98%; /* Adjust as necessary */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 1%;
-    background-color: #C5C5C5;
-    padding: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.6s ease, left 0.6s ease;
-    z-index: 6; /* Make sure it's above other content */
-}
-.startbar h2 {
-    padding-left: 12px;
-    font-size: 1.5em; /* Adjust the font size */
-    line-height: 0.5; /* Set line height for better spacing */
-    margin: 0; /* Remove default margin */
-}
-#closeportfolio {
-    position: absolute;
-    width: 2.5;
-    height: 3.5%;
-    font-size: 1.5em; /* Adjust the font size */
-    line-height: 0.5; /* Set line height for better spacing */
-    overflow: hidden;
-  cursor: pointer; /* Change cursor to pointer */
-  transition: background-color 0.3s; /* Smooth transition for background color */
-  position: fixed; /* Fixes the button to the viewport */
- top:0.5%; /* Distance from the bottom */
-  left: 98%; /* Center horizontally */
-  z-index: 7; /* Ensure it appears above other elements */
-    background-color: rgb(189,189,189); /* Darker red on hover */
-  }
-
-  #closeportfolio:hover {
-    background-color: #ff1a1a;
-
-  }
