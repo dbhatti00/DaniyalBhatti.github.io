@@ -1,17 +1,14 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const images = document.querySelectorAll('.image-grid');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+                observer.unobserve(entry.target); // Stop observing once animated
+            }
+        });
+    }, { threshold: 0.1 }); // Trigger when 10% of the image is in view
 
-
-const closeportfolio = document.getElementById('closeportfolio');
-
-
-
-document.querySelectorAll('.hand-image').forEach((img) => {
-    img.addEventListener('click', function() {
-        window.location.href = 'hand.html';
-    });
+    images.forEach(image => observer.observe(image));
 });
-closeportfolio.addEventListener('click',function(){
-    window.location.href = 'index.html';
-})
-
-
-
