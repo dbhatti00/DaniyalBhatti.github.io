@@ -23,6 +23,12 @@ document.getElementById('kid').addEventListener('click', function() {
     window.location.href = 'kid.html'; 
 })
 
+document.getElementById('horse').addEventListener('click', function() {
+    window.location.href = 'horse.html'; 
+})
+document.getElementById('tulio').addEventListener('click', function() {
+    window.location.href = 'tulio.html'; 
+})
 document.getElementById('mech').addEventListener('click', function() {
     window.location.href = 'mech.html'; 
 })
