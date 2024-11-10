@@ -1,64 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>Daniyal Bhatti Portfolio</title>
-        <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    
-        <script type="importmap">
-          {
-            "imports": {
-              "three": "https://unpkg.com/three@v0.163.0/build/three.module.js",
-              "three/addons/": "https://unpkg.com/three@v0.163.0/examples/jsm/"
-            }
-          }
-        </script>
-		<link rel="stylesheet" href="handstyle.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arm Render</title>
+    <link rel="stylesheet" href="handstyle.css">
+    <link rel="icon" href="/models/favion.png" type="image/x-icon">
+</head>
+<body>
 
-	</head>
-	<body>
-
-       
-        <div class="thumbnailborder">
-           <h2>Hand Render</h2>
-        </div>
-       
-        <div class="startbar">
-           <h2></h2>
-        </div>
-<h1>Programs Used:</h1>
-<img src="/Models/zbrushlogo.webp" alt="Model Image" class="logo-image">
-<img src="/Models/painterlogo.png" alt="Model Image" class="logo-image2">
-<img src="/Models/blenderlogo.png" alt="Model Image" class="logo-image3">
-<img src="/Models/mayalogo.png" alt="Model Image" class="logo-image4">
-<div class="handsculpt">
-   
-    <img src="/Models/handback.png" alt="Model Image" class="hand-image">
-    <img src="/Models/handfront.png" alt="Model Image" class="hand-image2">
-  
-</div>
-
-<div class="handmap">
-
-    <img src="/Models/handbasepng.png" alt="Model Image" class="hand-image3">
-    <img src="/Models/handnormal.png" alt="Model Image" class="hand-image4">
-    <img src="/Models/handroughpng.png" alt="Model Image" class="hand-image5">
-</div>
-
-
-<div class="handpose">
-   
-        <img src="/Models/handposed.png" alt="Model Image" class="hand-image6">
-      
+    <header class="banner">
+        <h1>‎ Arm Render</h1>
+        <a href="portfolio.html" class="button">Back</a>
+    </header>
+    <header class="programs">
+    <h2>Programs Used:</h2>
+  </header>
+    <div class="logo-row">
+        <img src="models/zbrushlogo.webp" alt="Logo 1" class="logo">
+        <img src="models/painterlogo.png" alt="Logo 2" class="logo">
+        <img src="models/blenderlogo.png" alt="Logo 3" class="logo">
+        <img src="models/mayalogo.png" alt="Logo 4" class="logo">
     </div>
-    <div class="handfinal">
-     
-            <img src="/Models/hand.png" alt="Model Image" class="hand-image7">
-          
-        </div>
 
-        <button id="back">Back</button>
-        <script type="module" src="./handscript.js"></script>
-	</body>
+    <!-- Main Render Image -->
+    <div class="main-image-container">
+      <img src="models/hand.png" alt="Render Image" class="main-image" id="image-toggle" onclick="toggleImage()">
+    </div>
+
+    <!-- Grid of Small Images and Text Section -->
+    <div class="content-grid">
+      <div class="image-grid">
+          <div class="image-container">
+              <img src="models/handback.png" alt="Hand Back" class="small-image">
+              <div class="image-overlay">
+                  <p>Front View of Zbrush Sculpt</p>
+              </div>
+          </div>
+          
+          <div class="image-container">
+              <img src="models/handside.png" alt="Hand Front" class="small-image">
+              <div class="image-overlay">
+                  <p>Side View of Zbrush Sculpt</p>
+              </div>
+          </div>
+          <div class="image-container">
+            <img src="models/handfront.png" alt="Hand Front" class="small-image">
+            <div class="image-overlay">
+                <p>Back View of Zbrush Sculpt</p>
+            </div>
+        </div>
+  
+          <div class="image-container">
+              <img src="models/handbasepng.png" alt="Hand Base" class="small-image">
+              <div class="image-overlay">
+                  <p>Texture Base Colour in Substance Painter</p>
+              </div>
+          </div>
+          
+          <div class="image-container">
+              <img src="models/handnormal.png" alt="Hand Normal" class="small-image">
+              <div class="image-overlay">
+                  <p>Normal + Height maps in Substance Painter</p>
+              </div>
+          </div>
+  
+          <div class="image-container">
+              <img src="models/handroughpng.png" alt="Hand Rough" class="small-image">
+              <div class="image-overlay">
+                  <p>Roughness map in Substance Painter</p>
+              </div>
+          </div>
+      </div>
+  
+     
+
+
+        <div class="description-box">
+          <h3>Process</h3>
+          <p>This project was a great opportunity to first dive into Substance Painter and refine my 3D skills. I sculpted a semi-realistic hand in ZBrush, focusing on muscle definition and skin details. Using Substance Painter, I applied realistic textures, and baked a normal map onto the model from a high poly mesh.
+
+            I then rigged and posed the hand in Blender, ensuring flexibility for a natural pose. Finally, I rendered the scene in Maya, where I fine-tuned lighting and materials for a polished look. This project helped me strengthen my abilities in sculpting, texturing, and rigging within the 3D pipeline.
+          </p>
+          <p>‎</p>
+          <p>You can see a wireframe of the model by clicking the image</p>
+      </div>
+    <script type="module" src="./handscript.js"></script>
+</body>
 </html>
