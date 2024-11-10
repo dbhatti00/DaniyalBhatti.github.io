@@ -107,7 +107,16 @@ body {
 .image-item1:hover {
     cursor: pointer;
 }
+.image-item2:hover {
+    cursor: pointer;
+}
 
+.image-item3:hover {
+    cursor: pointer;
+}
+.image-item4:hover {
+    cursor: pointer;
+}
 .image-item5:hover {
     cursor: pointer;
 }
