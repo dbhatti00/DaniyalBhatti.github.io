@@ -19,3 +19,6 @@ document.addEventListener("DOMContentLoaded", function() {
 document.getElementById('hand').addEventListener('click', function() {
     window.location.href = 'hand.html'; 
 })
+document.getElementById('kid').addEventListener('click', function() {
+    window.location.href = 'kid.html'; 
+})
