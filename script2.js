@@ -22,3 +22,7 @@ document.getElementById('hand').addEventListener('click', function() {
 document.getElementById('kid').addEventListener('click', function() {
     window.location.href = 'kid.html'; 
 })
+
+document.getElementById('mech').addEventListener('click', function() {
+    window.location.href = 'mech.html'; 
+})
