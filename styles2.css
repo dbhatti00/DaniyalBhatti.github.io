@@ -104,6 +104,10 @@ body {
     background-color: #b31b00; /* button color on hover */
 }
 
+.image-item1:hover {
+    cursor: pointer;
+}
+
 .image-item5:hover {
     cursor: pointer;
 }
