@@ -32,3 +32,6 @@ document.getElementById('tulio').addEventListener('click', function() {
 document.getElementById('mech').addEventListener('click', function() {
     window.location.href = 'mech.html'; 
 })
+document.getElementById('jinx').addEventListener('click', function() {
+    window.location.href = 'jinx.html'; 
+})
