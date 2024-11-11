@@ -120,6 +120,9 @@ body {
 .image-item5:hover {
     cursor: pointer;
 }
+.image-item6:hover {
+    cursor: pointer;
+}
 
 @media (max-width: 768px) {
     .image-grid {
