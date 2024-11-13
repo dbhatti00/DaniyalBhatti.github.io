@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: 'SF Distant Galaxy';
+  src: local('SF Distant Galaxy'), url(fonts/SF\ Distant\ Galaxy.ttf), format('ttf');
+}
+body {
+  background-color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  text-align: center; /* Center text-align for children elements */
+}
+
+.banner {
+  position: relative; /* Enables absolute positioning within this container */
+  width: 100%;
+  background-color: #000084; /* Blue color for the banner */
+  color: white;
+  text-align: left;
+  padding: 10px 0;
+  font-size: 1em;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.logo-row {
+  display: flex;
+ 
+  gap: 20px;
+  margin-bottom: 20px;
+}
+h2{
+
+  text-align: left;
+}
+.logo {
+  width: 60px;
+  height: auto;
+}
+
+.main-image-container {
+  width: 100%;
+  max-width: 90%;
+  margin-bottom: 20px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  
+}.content-grid {
+  display: flex;
+  
+  padding: 20px; /* Optional padding around the grid */
+  margin-top: 5%;
+  margin-left: 2%;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns for the grid */
+  grid-template-rows: repeat(2, auto); /* 2 rows */
+  gap: 10px; /* Space between the images */
+  max-width: 1200px; /* Optional: Limit container width */
+  width: 180%;
+}
+
+.small-image {
+  width: 100%;
+  height: auto;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.image-container {
+  position: relative;
+
+}
+.image-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+ 
+  padding: 20px;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  font-size: 18px;
+  z-index: 10;
+}
+
+.image-container:hover .small-image {
+  opacity: 0.5; /* Fades the image */
+  filter: grayscale(100%); /* Optional: Add a grayscale effect on hover */
+}
+
+.image-container:hover .image-overlay {
+  opacity: 1; /* Show the text */
+  visibility: visible; /* Make the text visible */
+}
+
+
+.description-box {
+ margin-left: 10px;
+  width: 80%;
+  height:360px;
+  min-height: 330px;
+  background-color: rgba(255, 255, 255, 0.8); /* Optional: semi-transparent background */
+  padding: 20px; /* Space inside the box */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for the box */
+  border-radius: 8px; /* Optional: rounded corners */
+}
+
+.description-box h3 {
+  margin-bottom: 10px;
+  font-size: 1.1vw;
+  font-weight: bold;
+}
+
+.description-box p {
+  font-size: .9vw;
+  line-height: 1.6;
+}
+
+.button {
+  position: absolute;
+  top: 50%;
+  right: 20px; /* Adjust the distance from the right edge */
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: #858585; /* button color */
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  line-height: 40px; /* centers text vertically */
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #b31b00; /* button color on hover */
+}
+
