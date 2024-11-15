@@ -1,6 +1,6 @@
-import * as THREE from './models/three/build/three.module.js';
-import { GLTFLoader } from './models/three/examples/jsm/loaders/GLTFLoader.js';
-import { DRACOLoader } from './models/three/examples/jsm/loaders/DRACOLoader.js';
+import * as THREE from './models/three/three/build/three.module.js';
+import { GLTFLoader } from './models/three/three/examples/jsm/loaders/GLTFLoader.js';
+import { DRACOLoader } from './models/three/three/examples/jsm/loaders/DRACOLoader.js';
 
 //old import method:
 //import * as THREE from 'three';
