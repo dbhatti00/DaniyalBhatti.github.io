@@ -49,12 +49,27 @@ h2{
 }
 
 .main-image {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.6s ease, transform 0.6s ease;
   width: 100%;
   height: auto;
   border-radius: 8px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   
-}.content-grid {
+}
+
+
+.main-image.show {
+  
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+
+
+.content-grid {
   display: flex;
   
   padding: 20px; /* Optional padding around the grid */
@@ -63,6 +78,9 @@ h2{
 }
 
 .image-grid {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.6s ease, transform 0.6s ease;
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 columns for the grid */
   grid-template-rows: repeat(2, auto); /* 2 rows */
@@ -70,7 +88,11 @@ h2{
   max-width: 1200px; /* Optional: Limit container width */
   width: 180%;
 }
-
+.image-grid.show {
+  
+  opacity: 1;
+  transform: scale(1);
+}
 .small-image {
   width: 100%;
   height: auto;
@@ -109,14 +131,23 @@ h2{
 
 
 .description-box {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.6s ease, transform 0.6s ease;
  margin-left: 10px;
   width: 80%;
-  height:360px;
-  min-height: 330px;
+  height:420px;
+  min-height: 420px;
   background-color: rgba(255, 255, 255, 0.8); /* Optional: semi-transparent background */
   padding: 20px; /* Space inside the box */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for the box */
   border-radius: 8px; /* Optional: rounded corners */
+}
+
+.description-box.show {
+  
+  opacity: 1;
+  transform: scale(1);
 }
 
 .description-box h3 {
