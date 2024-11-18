@@ -60,6 +60,6 @@ function toggleImage() {
         image.src = "models/witch3.jpg"; // Replace with the path to your render image
     }
     else {
-        image.src = "models/witch.jpg"; // Replace with the path to your render image
+        image.src = "models/witch4.jpg"; // Replace with the path to your render image
     }
 }
