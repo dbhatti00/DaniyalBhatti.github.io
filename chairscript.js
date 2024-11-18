@@ -17,6 +17,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     images.forEach(image => observer.observe(image));
 });
+window.onload = function() {
+    document.getElementById("image-toggle").onclick = toggleImage;
+}
 
 document.addEventListener("DOMContentLoaded", function() {
     const images = document.querySelectorAll('.description-box');
@@ -47,3 +50,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     images.forEach(image => observer.observe(image));
 });
+
+function toggleImage() {
+    var image = document.getElementById("image-toggle");
+    
+    if (image.src.includes("chair.png")) {
+        image.src = "models/chairwire.png"; // Replace with the path to your wireframe image
+    } else {
+        image.src = "models/chair.png"; // Replace with the path to your render image
+    }
+}
