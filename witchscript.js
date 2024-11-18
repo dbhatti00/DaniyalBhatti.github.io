@@ -56,7 +56,10 @@ function toggleImage() {
     
     if (image.src.includes("witch.jpg")) {
         image.src = "models/witch2.jpg"; // Replace with the path to your wireframe image
-    } else {
+    } else if (image.src.includes("witch2.jpg")) {
+        image.src = "models/witch3.jpg"; // Replace with the path to your render image
+    }
+    else {
         image.src = "models/witch.jpg"; // Replace with the path to your render image
     }
 }
