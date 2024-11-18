@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
 function toggleImage() {
     var image = document.getElementById("image-toggle");
     
-    if (image.src.includes("witch.jpg")) {
+    if (image.src.includes("witch4.jpg")) {
         image.src = "models/witch2.jpg"; // Replace with the path to your wireframe image
     } else if (image.src.includes("witch2.jpg")) {
         image.src = "models/witch3.jpg"; // Replace with the path to your render image
