@@ -27,7 +27,7 @@ document.getElementById('horse').addEventListener('click', function() {
     window.location.href = 'horse.html'; 
 })
 document.getElementById('tulio').addEventListener('click', function() {
-    window.location.href = 'tulio.html'; 
+    window.location.href = 'witch.html'; 
 })
 document.getElementById('mech').addEventListener('click', function() {
     window.location.href = 'mech.html'; 
