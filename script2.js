@@ -26,8 +26,8 @@ document.getElementById('kid').addEventListener('click', function() {
 document.getElementById('horse').addEventListener('click', function() {
     window.location.href = 'horse.html'; 
 })
-document.getElementById('tulio').addEventListener('click', function() {
-    window.location.href = 'witch.html'; 
+document.getElementById('concept').addEventListener('click', function() {
+    window.location.href = 'concept.html'; 
 })
 document.getElementById('mech').addEventListener('click', function() {
     window.location.href = 'mech.html'; 
