@@ -55,7 +55,7 @@ function toggleImage() {
     var image = document.getElementById("image-toggle");
     
     if (image.src.includes("concept.jpg")) {
-        image.src = "models/concept2.jpg"; // Replace with the path to your wireframe image
+        image.src = "models/conceptwire.png"; // Replace with the path to your wireframe image
     } 
     else {
         image.src = "models/concept.jpg"; // Replace with the path to your render image
