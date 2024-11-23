@@ -297,3 +297,9 @@ setTimeout(function() {
   portfolioButton.style.opacity = '0';
 
 })
+
+window.addEventListener('pageshow', (event) => {
+    if (event.persisted) {
+        window.location.reload();
+    }
+});
