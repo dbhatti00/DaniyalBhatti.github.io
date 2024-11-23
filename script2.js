@@ -1,4 +1,6 @@
-
+import * as THREE from './models/three/three/build/three.module.js';
+import { GLTFLoader } from './models/three/three/examples/jsm/loaders/GLTFLoader.js';
+import { DRACOLoader } from './models/three/three/examples/jsm/loaders/DRACOLoader.js';
 
 
 document.addEventListener("DOMContentLoaded", function() {
