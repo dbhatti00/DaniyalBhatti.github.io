@@ -55,9 +55,9 @@ document.addEventListener("DOMContentLoaded", function() {
 function toggleImage() {
     var image = document.getElementById("image-toggle");
     
-    if (image.src.includes("mech.png")) {
-        image.src = "models/mechwire.png"; // Replace with the path to your wireframe image
+    if (image.src.includes("samus2.png")) {
+        image.src = "models/samuswire.png"; // Replace with the path to your wireframe image
     } else {
-        image.src = "models/mech.png"; // Replace with the path to your render image
+        image.src = "models/samus2.png"; // Replace with the path to your render image
     }
 }
