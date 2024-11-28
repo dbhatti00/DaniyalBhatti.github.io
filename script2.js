@@ -31,8 +31,8 @@ document.getElementById('horse').addEventListener('click', function() {
 document.getElementById('concept').addEventListener('click', function() {
     window.location.href = 'concept.html'; 
 })
-document.getElementById('mech').addEventListener('click', function() {
-    window.location.href = 'mech.html'; 
+document.getElementById('Samus').addEventListener('click', function() {
+    window.location.href = 'samus.html'; 
 })
 document.getElementById('jinx').addEventListener('click', function() {
     window.location.href = 'jinx.html'; 
