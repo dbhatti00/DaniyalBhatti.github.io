@@ -25,8 +25,8 @@ document.getElementById('kid').addEventListener('click', function() {
     window.location.href = 'kid.html'; 
 })
 
-document.getElementById('horse').addEventListener('click', function() {
-    window.location.href = 'horse.html'; 
+document.getElementById('style').addEventListener('click', function() {
+    window.location.href = 'style.html'; 
 })
 document.getElementById('concept').addEventListener('click', function() {
     window.location.href = 'concept.html'; 
