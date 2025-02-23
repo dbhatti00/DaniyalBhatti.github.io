@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded", function() {
 document.getElementById('orc').addEventListener('click', function() {
     window.location.href = 'orc.html'; 
 })
-document.getElementById('kid').addEventListener('click', function() {
-    window.location.href = 'kid.html'; 
+document.getElementById('realistic').addEventListener('click', function() {
+    window.location.href = 'realistic.html'; 
 })
 
 document.getElementById('style').addEventListener('click', function() {
