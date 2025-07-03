@@ -31,7 +31,7 @@ const name = document.querySelector('.name');
 const aboutButton = document.getElementById('about');
 const portfolioButton = document.getElementById('projects');
 
-scene.background = new THREE.Color(0xf5f5dc);
+scene.background = new THREE.Color(0xF5FFFC);
 const intersectionPoint = new THREE.Vector3();
 const target = new THREE.Object3D();
 const planeNormal = new THREE.Vector3();
@@ -66,7 +66,7 @@ loader.setDRACOLoader(dracoLoader);
 
 
 
-loader.load('Me12.glb', (glb) => {
+loader.load('me13.glb', (glb) => {
 
   const mesh = glb.scene;
   console.log(glb.scene);
