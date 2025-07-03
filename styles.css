@@ -17,20 +17,20 @@
   #about-window {
     font-family: 'Poppins', sans-serif;
     color: #333333; /* Text color */
-    background-color: rgba(121, 120, 85, 0.603);
+    background-color: #f5fffc85;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.6s ease, left 0.6s ease;
     height: 60%;
     width: 40%;
     overflow-y: auto;
-
-    
+    display: grid;
+  
 }
 .about-paragraph{
   display: block; /* Stack them vertically */
   max-width: 80%;
   max-height: 50%;
-  font-size: 1.3vw; /* Responsive font size */
+  font-size: 1.4vw; /* Responsive font size */
    margin-bottom: 20px; /* Add bottom margin for spacing to next element */
 }
 
@@ -46,7 +46,15 @@
     font-size: 1.2vw;
    
 }
-
+.resume,
+.linkedin,
+.email,
+.about-paragraph
+ {
+  grid-template-columns: repeat(1, 1fr);
+  gap:10px;
+   
+}
 .linkedin:hover,
 .email:hover,
 .resume:hover {
