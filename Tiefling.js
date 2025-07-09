@@ -26,7 +26,7 @@ let objToRender = 'Tiefling';
 scene.background = new THREE.Color(0x222220);
 
 //Load the file
-let loader = new GLTFLoader().setPath('/Models/');
+let loader = new GLTFLoader().setPath('/');
 loader.load('tiefling.glb', (glb) => {
     //If the file is loaded, add it to the scene
     object = glb.scene;
