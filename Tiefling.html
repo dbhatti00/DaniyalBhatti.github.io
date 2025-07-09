@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiefling Model</title>
+    <link rel="stylesheet" href="Tieflingstyle.css">
+    <link rel="icon" href="/models/favion.png" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "./models/three/three/build/three.module.js",
+            
+          "three/addons/": "https://unpkg.com/three@v0.163.0/examples/jsm/"
+         
+        }
+      }
+    </script>
+	</head>
+</head>
+
+<body>
+
+    <header class="banner">
+        <h1>‎ Tiefling Character Model </h1>
+        <a href="portfolio.html" class="button">Back</a>
+    </header>
+    <header class="programs fade-in">
+    <h2>Programs Used:</h2>
+  </header>
+    <div class="logo-row fade-in">
+        <img src="models/zbrushlogo.webp" alt="Logo 1" class="logo">
+        <img src="models/painterlogo.png" alt="Logo 2" class="logo">
+        <img src="models/mayalogo.png" alt="Logo 4" class="logo">
+    </div>
+
+    <div class="controls-info fade-in">
+    <strong>Navigation Controls:</strong><br>
+    • Rotate: Left Mouse Button<br>
+    • Zoom: Mouse Wheel<br>
+    • Pan: Right Mouse Button / Shift + Left Mouse Button
+  </div>
+
+
+ <div id="container3D" class="fade-in"></div>
+    
+<div class="side-by-side fade-in">
+  <div class="image-column">
+      <img src="models/TieflingPosed.png" alt="Image 1" class="zoomable">
+  <img src="models/TieflingCover.png" alt="Image 2" class="zoomable">
+  <img src="models/TieflingCoverWiter.png" alt="Image 3" class="zoomable">
+     
+      
+    </div>
+   
+
+         <div class="description-column">
+          <h3>Description</h3>
+          <p>This stylized 3D character is based on an original concept by Lin Chill on ArtStation. Drawing inspiration from the strong shapes and dynamic personality of the design, I aimed to capture that energy in a clean, game-ready model optimized for real-time use. The final asset features approximately 90,000 triangles, balancing visual fidelity with performance.
+
+
+
+          </p>
+ <p>‎</p>
+          <p>The high-resolution sculpt was created in ZBrush, followed by  retopology and UV mapping in Maya to ensure efficient geometry flow and texture space utilization. Hand-painted textures were crafted in Substance Painter to emphasize the stylized forms and maintain vibrant color harmony. The final presentation and rendering were completed in Blender, showcasing the model’s details and material work.
+
+Special thanks to Lin Chill for the original concept and creative inspiration.</p>
+          <p>‎</p>
+         
+          
+         
+      </div>
+  <div class="image-zoom-overlay" id="imageZoomOverlay">
+  <img src="" alt="Zoomed Image" id="zoomedImage">
+</div>
+    <script type="module" src="./Tiefling.js"></script>
+</body>
+</html>
