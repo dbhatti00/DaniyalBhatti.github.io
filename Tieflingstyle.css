@@ -176,7 +176,9 @@
     padding: 20px;
     gap: 20px;
   }
-
+ .logo {
+    width: 45px;
+  }
   .image-column,
   .description-column,
   .right-column-wrapper {
