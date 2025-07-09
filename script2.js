@@ -34,6 +34,6 @@ document.getElementById('concept').addEventListener('click', function() {
 document.getElementById('Samus').addEventListener('click', function() {
     window.location.href = 'samus.html'; 
 })
-document.getElementById('jinx').addEventListener('click', function() {
-    window.location.href = 'jinx.html'; 
+document.getElementById('Tiefling').addEventListener('click', function() {
+    window.location.href = 'Tiefling.html'; 
 })
