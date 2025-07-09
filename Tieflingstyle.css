@@ -65,11 +65,14 @@
 
 
   .logo-row {
-    display: flex;
-   
-    gap: 20px;
-    margin-bottom: 20px;
-  }
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  flex-wrap: wrap; /* allows wrapping if needed */
+  gap: 20px;
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
   h2{
   
     text-align: left;
@@ -186,11 +189,8 @@
     padding: 20px;
   }
 
-  .logo-row {
-    flex-direction: column;
-    align-items: center;
-  }
-
+ 
+ 
   #container3D,
   .model-video {
     width: 100%;
