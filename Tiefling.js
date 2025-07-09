@@ -24,22 +24,25 @@ let objToRender = 'Tiefling';
 
 
 scene.background = new THREE.Color(0x222220);
+const dracoLoader = new DRACOLoader();
 
-//Load the file
+
+dracoLoader.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.5.7/'); // Update this path
 let loader = new GLTFLoader().setPath('/');
+loader.setDRACOLoader(dracoLoader);
 loader.load('tiefling.glb', (glb) => {
     //If the file is loaded, add it to the scene
     object = glb.scene;
     scene.add(object);
-
+const loaderDiv = document.getElementById('loader');
+    if (loaderDiv) loaderDiv.style.display = 'none';
   },
   function (xhr) {
-    //While it is loading, log the progress
-    console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+    // Optional: track loading progress
+    console.log(`${(xhr.loaded / xhr.total * 100).toFixed(0)}% loaded`);
   },
   function (error) {
-    //If there is an error, log it
-    console.error(error);
+    console.error('An error happened', error);
   }
 );
 
