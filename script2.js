@@ -21,16 +21,12 @@ document.addEventListener("DOMContentLoaded", function() {
 document.getElementById('orc').addEventListener('click', function() {
     window.location.href = 'orc.html'; 
 })
-document.getElementById('realistic').addEventListener('click', function() {
-    window.location.href = 'realistic.html'; 
-})
+
 
 document.getElementById('style').addEventListener('click', function() {
     window.location.href = 'style.html'; 
 })
-document.getElementById('concept').addEventListener('click', function() {
-    window.location.href = 'concept.html'; 
-})
+
 document.getElementById('Samus').addEventListener('click', function() {
     window.location.href = 'samus.html'; 
 })
