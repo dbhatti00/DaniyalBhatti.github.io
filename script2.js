@@ -23,8 +23,8 @@ document.getElementById('shoe').addEventListener('click', function() {
 })
 
 
-document.getElementById('style').addEventListener('click', function() {
-    window.location.href = 'style.html'; 
+document.getElementById('material').addEventListener('click', function() {
+    window.location.href = 'material.html'; 
 })
 
 document.getElementById('Samus').addEventListener('click', function() {
