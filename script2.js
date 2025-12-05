@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", function() {
     images.forEach(image => observer.observe(image));
 });
 
-document.getElementById('orc').addEventListener('click', function() {
-    window.location.href = 'orc.html'; 
+document.getElementById('shoe').addEventListener('click', function() {
+    window.location.href = 'shoe.html'; 
 })
 
 
