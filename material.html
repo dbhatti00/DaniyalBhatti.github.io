@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Material Render</title>
+    <link rel="stylesheet" href="Materialstyle.css">
+    <link rel="icon" href="/assets/favion.png" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "./assets/three/three/build/three.module.js",
+            
+          "three/addons/": "https://unpkg.com/three@v0.163.0/examples/jsm/"
+         
+        }
+      }
+    </script>
+</head>
+
+<body>
+
+    <header class="banner">
+        <h1>Material Study</h1>
+        <a href="portfolio.html" class="button">Back</a>
+    </header>
+    <header class="programs fade-in">
+    <h2>Programs Used:</h2>
+  </header>
+    <div class="logo-row fade-in">
+        <img src="assets/logos/Substance_Designer.png" alt="Substance Painter logo" class="logo">
+        <img src="assets/logos/maya_logo.png" alt="Maya logo" class="logo">
+    </div>
+
+
+ <div class="viewer-wrapper fade-in">
+  <video class="model-video" autoplay muted loop playsinline>
+    <source src="assets/Material/Material_Turn.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+
+<div class="side-by-side fade-in">
+  <div class="image-column">
+      <img src="assets/material/material_closeup.jpg" alt="Tiefling character posed render" class="zoomable">
+  <img src="assets/material/material_top.jpg" alt="Tiefling character cover render" class="zoomable">
+  <img src="assets/material/material_node.png" alt="Tiefling character wireframe render" class="zoomable">
+     
+      
+    </div>
+   
+
+         <div class="description-column">
+          <h3>Description</h3>
+          
+          <p>Constructed entirely within Substance Designer, this 100% procedural PBR material achieves realistic ground surface complexity through a layering process. I began by defining the primary rock structure using procedural noises and functions to sculpt the heightmap, capturing sharp and rounded forms. Water elements were then integrated using a mask derived directly from the rock's height data, ensuring puddles naturally occupy the lowest areas. Finally, greenery and moss were procedurally blended onto the surface based on factors like slope and ambient occlusion, creating an organic, natural distribution.</p>
+          <p>‎</p>
+         
+          
+         
+      </div>
+
+
+
+      
+  <div class="image-zoom-overlay" id="imageZoomOverlay">
+  <img src="" alt="Zoomed Image" id="zoomedImage">
+</div>
+
+    <script type="module" src="./material.js"></script>
+</body>
+</html>

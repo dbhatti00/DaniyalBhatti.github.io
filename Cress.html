@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Cress WIP</title>
+    <link rel="stylesheet" href="Cress.css">
+    <link rel="icon" href="/assets/favion.png" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "./assets/three/three/build/three.module.js",
+            
+          "three/addons/": "https://unpkg.com/three@v0.163.0/examples/jsm/"
+         
+        }
+      }
+    </script>
+</head>
+
+<body>
+
+    <header class="banner">
+        <h1> Character Sculpt WIP</h1>
+        <a href="portfolio.html" class="button">Back</a>
+    </header>
+    <header class="programs fade-in">
+    <h2>Programs Used:</h2>
+  </header>
+    <div class="logo-row fade-in">
+        <img src="assets/logos/zbrush_logo.webp" alt="ZBrush logo" class="logo">
+  
+    </div>
+
+
+ <div class="main-image-container">
+      <img src="assets/cress/Cress.jpg" alt="Render Image" class="main-image show" id="image-toggle" onclick="toggleImage()">
+    </div>
+</div>
+
+
+<div class="side-by-side fade-in">
+  <div class="image-column">
+      <img src="assets/cress/Cress_front.jpg" alt="Cress Front" class="zoomable">
+  <img src="assets/cress/Cress_side.jpg" alt="Cress Side" class="zoomable">
+     
+      
+    </div>
+   
+
+         <div class="description-column">
+          <h3>Description</h3>
+          <p>This is a work-in-progress sculpt of a character named Cress from the RPG Tales of Phantasia. The sculpt is being created using ZBrush, and the focus is on capturing the character's unique features and personality. The images showcase different angles of the sculpt, highlighting the details and craftsmanship involved in bringing Cress to life. The project is ongoing, and further refinements and textures will be added as development continues.</p>
+
+
+
+          </p>
+ <p>‎</p>
+
+          
+         
+      </div>
+
+
+
+      
+  <div class="image-zoom-overlay" id="imageZoomOverlay">
+  <img src="" alt="Zoomed Image" id="zoomedImage">
+</div>
+
+    <script type="module" src="./cress.js"></script>
+</body>
+</html>

@@ -2,55 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="styles2.css">
-    <link rel="icon" href="/models/favion.png" type="image/x-icon">
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="icon" href="/assets/favion.png" type="image/x-icon">
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-
-    <script type="importmap">
-      {
-        "imports": {
-       
-          "three": "./models/three/three/build/three.module.js",
-          "three/addons/": "https://unpkg.com/three@v0.163.0/examples/jsm/"
-         
-        }
-      }
-    </script>
 
 </head>
 
 
 <body>
     <header class="banner">
-        <h1>‎ Portfolio- Click Images for Details</h1>
+        <h1>Portfolio - Click Images for Details</h1>
         <a href="index.html" class="button">X</a>
     </header>
 
     <div class="image-grid">
         <div id = "Tiefling">  
-        <div class="image-item6"><img src="/Models/Tiefling.png" alt="Image 6"></div>
+        <div class="image-item1"><img src="/assets/tiefling/Tiefling.png" alt="Tiefling character render"></div>
     </div>
-        <div id = "realistic">  
-            <div class="image-item1"><img src="/Models/Realistic.jpg" alt="Image 1"></div>
-        </div>
         
-        <div id = "Samus">  
-            <div class="image-item2"><img src="/Models/samus2.png" alt="Image 2"></div>
+        
+        <div id = "Cress">  
+            <div class="image-item2"><img src="/assets/cress/Cress_closeup.jpg" alt="Cress Sculpt"></div>
         </div>
-        <div id = "style"> 
-            <div class="image-item3"><img src="/Models/style.png" alt="Image 3"></div>
+        <div id = "Material"> 
+            <div class="image-item3"><img src="/assets/material/material.jpg" alt="Material study render"></div>
         </div>
        
     
-    <div id = "concept"> 
-        <div class="image-item4"><img src="/Models/concept.jpg" alt="Image 4"></div>
-    </div>
-    <div id = "orc">  
-        <div class="image-item5"><img src="/Models/orc.jpg" alt="Image 5"></div>
+    
+    <div id = "Shoe">  
+        <div class="image-item4"><img src="/assets/shoe/Shoe.png" alt = "Shoe render"></div>
     </div>
     
     
@@ -58,6 +43,6 @@
     
     </div>
 
-    <script type="module" src="script2.js" defer></script>
+    <script type="module" src="portfolio.js" defer></script>
 </body>
 </html>

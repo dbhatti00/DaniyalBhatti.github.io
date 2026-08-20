@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Shoe Model</title>
+    <link rel="stylesheet" href="shoestyle.css">
+    <link rel="icon" href="/assets/favion.png" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "./assets/three/three/build/three.module.js",
+            
+          "three/addons/": "https://unpkg.com/three@v0.163.0/examples/jsm/"
+         
+        }
+      }
+    </script>
+</head>
+
+<body>
+
+    <header class="banner">
+        <h1>Object Study</h1>
+        <a href="portfolio.html" class="button">Back</a>
+    </header>
+    <header class="programs fade-in">
+    <h2>Programs Used:</h2>
+  </header>
+    <div class="logo-row fade-in">
+        <img src="assets/logos/painter_logo.png" alt="Substance Painter logo" class="logo">
+        <img src="assets/logos/maya_logo.png" alt="Maya logo" class="logo">
+        <img src="assets/logos/blender_logo.png" alt="Blender logo" class="logo">
+    </div>
+
+
+ <div class="viewer-wrapper fade-in">
+  <video class="model-video" autoplay muted loop playsinline>
+    <source src="assets/shoe/shoe_turn.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+
+<div class="side-by-side fade-in">
+  <div class="image-column">
+      <img src="assets/Shoe/Shoe.png" alt="Tiefling character posed render" class="zoomable">
+  <img src="assets/Shoe/shoe_closeup.png" alt="Tiefling character cover render" class="zoomable">
+  <img src="assets/Shoe/Shoe_wire.png" alt="Tiefling character wireframe render" class="zoomable">
+     
+      
+    </div>
+   
+
+         <div class="description-column">
+          <h3>Description</h3>
+          <p>This project showcases a detailed sneaker model based off the Nike Metcon 5, starting with modeling in Blender. The model was brought into Substance Painter, where high-resolution, textures—including stitching, material wear, and accurate surface maps—were painted. The final scene setup were rendered in Maya, capturing the details and materials in their best light.
+          </p>
+ <p>‎</p>
+       
+         
+          
+         
+      </div>
+
+
+
+      
+  <div class="image-zoom-overlay" id="imageZoomOverlay">
+  <img src="" alt="Zoomed Image" id="zoomedImage">
+</div>
+
+    <script type="module" src="./shoescript.js"></script>
+</body>
+</html>
