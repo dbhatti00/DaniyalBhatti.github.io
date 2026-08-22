@@ -10,12 +10,6 @@ body {
     text-align: center; /* Center text-align for children elements */
 }
 
-/* ---- banner ----
-   FIX: was position:relative with the "X" button pinned via
-   position:absolute; right:20px and the <h1> left with no size limit or
-   reserved space. On narrow screens the title text ran full-width and
-   collided with the button. Switched to flexbox so the title and button
-   always share the row without overlapping, at any width. */
 .banner {
     width: 100%;
     background-color: #000084; /* Blue color for the banner */
@@ -64,17 +58,29 @@ body {
     display: block;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .image-item6 img {
     width: 100%;
     height: auto;
     display: block;
     border-radius: 8px;
-   
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+
+
+.image-item1:hover img,
+.image-item2:hover img,
+.image-item3:hover img,
+.image-item4:hover img,
+.image-item5:hover img,
+.image-item6:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
 .button {
-    /* FIX: no longer absolutely positioned — sits in the flex row now,
-       so it can't drift over the title text on any screen size. */
     flex-shrink: 0;
     width: 40px;
     height: 40px;
