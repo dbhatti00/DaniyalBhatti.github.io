@@ -5,9 +5,6 @@
   }
   @font-face {
     font-family: 'SF Distant Galaxy';
-    /* FIX: format('ttf') isn't a valid CSS format keyword, and it was
-       written as a separate comma-separated src instead of chained to the
-       url() — same bug as the home page's stylesheet. Fixed here too. */
     src: local('SF Distant Galaxy'), url('fonts/SF Distant Galaxy.ttf') format('truetype');
   }
   body {
@@ -16,10 +13,6 @@
     text-align: center; /* Center text-align for children elements */
   }
   
-  /* ---- banner ----
-     FIX: same issue as portfolio.html — .button was position:absolute and
-     only got un-stuck from the h1 via a mobile-only override. Moved to
-     flexbox so title + button share the row correctly at any width. */
   .banner {
     width: 100%;
     background-color: #000084;
@@ -61,6 +54,14 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
+  /* enables the hover scale below to ease in instead of snapping */
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+
+.image-column img.zoomable:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 28px rgba(0, 0, 0, 0.6);
 }
 
 .description-column {
@@ -80,10 +81,6 @@
 
   .logo-row {
   display: flex;
-  /* FIX: "left" isn't a valid align-items value (only recognized for
-     justify-content in some engines), so it was silently ignored and
-     align-items fell back to the default "stretch" — logos with different
-     aspect ratios could get vertically distorted. Using real keywords now. */
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
@@ -109,8 +106,6 @@
 }
   
   .button {
-    /* FIX: no longer absolutely positioned — sits in the banner's flex row,
-       so it can't drift over the title on any screen size. */
     flex-shrink: 0;
     width: 40px;
     height: 40px;
@@ -129,11 +124,6 @@
     background-color: #b31b00; /* button color on hover */
   }
   
-  /* ---- zoom overlay ----
-     FIX: width:100vw/height:100vh doesn't account for mobile browser
-     chrome (address bar) or scrollbar-gutter quirks, so the fullscreen
-     overlay could run past the visible viewport on phones. inset:0 on a
-     fixed-position element sizes it to the true visible viewport instead. */
   .image-zoom-overlay {
   position: fixed;
   inset: 0;
